@@ -1,0 +1,15 @@
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.csproj.AssemblyReference.cache
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.AssemblyInfoInputs.cache
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.AssemblyInfo.cs
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.csproj.CoreCompileInputs.cache
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\bin\Debug\net7.0\Seminarmaster.exe
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\bin\Debug\net7.0\Seminarmaster.deps.json
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\bin\Debug\net7.0\Seminarmaster.runtimeconfig.json
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\bin\Debug\net7.0\Seminarmaster.dll
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\bin\Debug\net7.0\Seminarmaster.pdb
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.dll
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\refint\Seminarmaster.dll
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.pdb
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\Seminarmaster.genruntimeconfig.cache
+C:\Users\Artur\Desktop\Coding\CSharp\seminars\sem2\Seminarmaster\obj\Debug\net7.0\ref\Seminarmaster.dll
