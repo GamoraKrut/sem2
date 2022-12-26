@@ -195,19 +195,50 @@
 
 // DZ sem 2:Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным:
 
-Console.Clear();
-Console.Write("Input number: ");
-int A = Convert.ToInt32(Console.ReadLine());
+// Console.Clear();
+// Console.Write("Input number: ");
+// int A = Convert.ToInt32(Console.ReadLine());
 
-if (A > 7 || A < 1)
+// if (A > 7 || A < 1)
+// {
+//     Console.WriteLine("Incorrect day");
+// }
+// else if (A > 5)
+// {
+//     Console.WriteLine("Yes it's holiday");
+// }
+// else
+// {
+//     Console.WriteLine("No it's weekday");
+// }
+
+// SEM 2:
+
+// zad 1: Напишите программу которая принимает на вход координаты причем X != 0, Y != 0,  и выдаёт номкр четверти плоскости в которой находится:
+
+Console.Clear();
+Console.Write("Input X: ");
+int X = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input Y: ");
+int Y = Convert.ToInt32(Console.ReadLine());
+
+if (X > 0 && Y > 0)
 {
-    Console.WriteLine("Incorrect day");
+    Console.WriteLine("First quarter");
 }
-else if (A > 5)
+else if (X < 0 && Y > 0)
 {
-    Console.WriteLine("Yes it's holiday");
+    Console.WriteLine("Second quarter");
+}
+else if (X < 0 && Y < 0)
+{
+    Console.WriteLine("Third quarter");
+}
+else if (X > 0 && Y < 0)
+{
+    Console.WriteLine("Fourth quarter");
 }
 else
 {
-    Console.WriteLine("No it's weekday");
+    Console.WriteLine("incorrect input");
 }
