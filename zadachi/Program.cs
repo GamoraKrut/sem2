@@ -294,7 +294,14 @@
 
 // Zad 3: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
 
-Console.Clear();
-int N = Convert.ToInt32(Console.ReadLine);
-int i = 1;
-while (i < N) { }
+// Console.Clear();
+// int N = Convert.ToInt32(Console.ReadLine());
+// int i = 1;
+// int a = 0;
+// Console.Write($"{N} --->");
+// while (i <= N)
+// {
+//     a = i * i * i;
+//     Console.Write($"{a}, ");
+//     i = i + 1;
+// }
