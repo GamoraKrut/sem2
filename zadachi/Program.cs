@@ -212,33 +212,89 @@
 //     Console.WriteLine("No it's weekday");
 // }
 
-// SEM 2:
+// SEM 3:
 
-// zad 1: Напишите программу которая принимает на вход координаты причем X != 0, Y != 0,  и выдаёт номкр четверти плоскости в которой находится:
+// zad 1: Напишите программу которая принимает на вход координаты причем X != 0, Y != 0,  и выдаёт номер четверти плоскости в которой находится:
+
+// Console.Clear();
+// Console.Write("Input X: ");
+// int X = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Y: ");
+// int Y = Convert.ToInt32(Console.ReadLine());
+
+// if (X > 0 && Y > 0)
+// {
+//     Console.WriteLine("First quarter");
+// }
+// else if (X < 0 && Y > 0)
+// {
+//     Console.WriteLine("Second quarter");
+// }
+// else if (X < 0 && Y < 0)
+// {
+//     Console.WriteLine("Third quarter");
+// }
+// else if (X > 0 && Y < 0)
+// {
+//     Console.WriteLine("Fourth quarter");
+// }
+// else
+// {
+//     Console.WriteLine("incorrect input");
+// }
+
+// DZ
+// zad 2:Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом
+// Console.Clear();
+// int a = Convert.ToInt32(Console.ReadLine());
+// if (a >= 100000 || a < 10000)
+// {
+//     Console.WriteLine("только пятизнaчное число");
+// }
+// else
+// {
+//     string s = a.ToString();
+//     char[] ar = s.ToCharArray();
+//     Array.Reverse(ar);
+//     s = new String(ar);
+//     int b = Convert.ToInt32(s);
+//     if (a == b)
+//     {
+//         Console.WriteLine($"{a} = {b} является палиндромом");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"{a} не равно {b} не является палиндромом");
+//     }
+// }
+// Console.WriteLine(a);
+
+// zad 2: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве
+
+// Console.Clear();
+// Console.WriteLine("Введите координаты точки A: ");
+// Console.Write("x:");
+// int ax = Convert.ToInt32(Console.ReadLine());
+// Console.Write("y:");
+// int ay = Convert.ToInt32(Console.ReadLine());
+// Console.Write("z:");
+// int az = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты точки B: ");
+// Console.Write("x:");
+// int bx = Convert.ToInt32(Console.ReadLine());
+// Console.Write("y:");
+// int by = Convert.ToInt32(Console.ReadLine());
+// Console.Write("z:");
+// int bz = Convert.ToInt32(Console.ReadLine());
+
+// double sum = Math.Sqrt(
+//     Math.Abs(Math.Pow((bx - ax), 2)) + (Math.Pow((by - ay), 2)) + (Math.Pow((bz - az), 2))
+// );
+// Console.WriteLine(sum);
+
+// Zad 3: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
 
 Console.Clear();
-Console.Write("Input X: ");
-int X = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input Y: ");
-int Y = Convert.ToInt32(Console.ReadLine());
-
-if (X > 0 && Y > 0)
-{
-    Console.WriteLine("First quarter");
-}
-else if (X < 0 && Y > 0)
-{
-    Console.WriteLine("Second quarter");
-}
-else if (X < 0 && Y < 0)
-{
-    Console.WriteLine("Third quarter");
-}
-else if (X > 0 && Y < 0)
-{
-    Console.WriteLine("Fourth quarter");
-}
-else
-{
-    Console.WriteLine("incorrect input");
-}
+int N = Convert.ToInt32(Console.ReadLine);
+int i = 1;
+while (i < N) { }
