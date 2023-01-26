@@ -389,73 +389,74 @@
 //     Console.Write(mass[i]);
 // }
 
-DZ sem 4.
-zad 1: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// DZ sem 4.
+// zad 1: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
-Console.Clear();
-Console.Write("Введите число: ");
-int A = int.Parse(Console.ReadLine());
-Console.Write("Введите степень: ");
-int B = int.Parse(Console.ReadLine());
-Console.WriteLine($"{A} в степени {B} = {Pow(A, B)}");
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int A = int.Parse(Console.ReadLine());
+// Console.Write("Введите степень: ");
+// int B = int.Parse(Console.ReadLine());
+// Console.WriteLine($"{A} в степени {B} = {Pow(A, B)}");
 
-int Pow(int num, int rank)
-{
-    if (rank == 0)
-        return 1;
+// int Pow(int num, int rank)
+// {
+//     if (rank == 0)
+//         return 1;
 
-    int result = num;
-    for (int i = 2; i <= rank; i++)
-    {
-        result *= num;
-    }
-    return result;
-}
+//     int result = num;
+//     for (int i = 2; i <= rank; i++)
+//     {
+//         result *= num;
+//     }
+//     return result;
+// }
 
-zad 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// zad 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-Console.Clear();
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-Console.WriteLine($"Сумма цифр = {NumSum(num)}");
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine());
+// Console.WriteLine($"Сумма цифр = {NumSum(num)}");
 
-int NumSum(int number)
-{
-    int sum = 0;
-    while (number > 0)
-    {
-        sum += number % 10;
-        number /= 10;
-    }
-    return sum;
-}
+// int NumSum(int number)
+// {
+//     int sum = 0;
+//     while (number > 0)
+//     {
+//         sum += number % 10;
+//         number /= 10;
+//     }
+//     return sum;
+// }
 
-zad 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-Console.Clear();
-int[] CreateArray()
-{
-    int[] arr = new int[8];
-    for (int i = 0; i < 8; i++)
-    {
-        Console.Write($"Введите {i + 1} элемент массива: ");
-        arr[i] = Convert.ToInt32(Console.ReadLine());
-    }
-    return arr;
-}
+// zad 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// Console.Clear();
+// int[] CreateArray()
+// {
+//     int[] arr = new int[8];
+//     for (int i = 0; i < 8; i++)
+//     {
+//         Console.Write($"Введите {i + 1} элемент массива: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return arr;
+// }
 
-void Show(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write(arr[i] + " ");
-    }
-    Console.WriteLine();
-}
+// void Show(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-int[] myArray = CreateArray();
-Show(myArray);
+// int[] myArray = CreateArray();
+// Show(myArray);
 
 // Sem 5
+// Razbor dz massiv
 // int[] RandomArray(int N, int start, int end)
 // {
 //     int[] Array = new int[N];
@@ -501,6 +502,9 @@ Show(myArray);
 // Console.WriteLine("--------");
 // int[] myArray = CreateArray();
 // Show(myArray);
+
+
+
 // DZ sem 5.
 // zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
