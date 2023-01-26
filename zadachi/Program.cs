@@ -546,8 +546,97 @@
 // Show(myArray);
 // Count(myArray);
 
+// // zad 2 Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// Console.Clear();
+// int[] RandomArray(int N, int start, int end)
+// {
+//     int[] Array = new int[N];
+//     for(int i = 0; i < N; i ++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+// return Array;
+// }
+
+// void Show(int[] Arr)
+// {
+//     for(int i = 0; i< Arr.Length; i ++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int [] TurnNegPos(int[] Arr)
+// {
+//     for(int i = 0; i < Arr.Length; i++)
+//     {
+//         Arr[i] *= -1;
+//     }
+//     return Arr;
+// }
 
 
+
+// Console.Write("Введите размер массива: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите начало диапазона: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите конец диапазона: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int [] myArray = RandomArray(num, min, max);
+// Show(myArray);
+// int[] NegPos = TurnNegPos(myArray);
+// Show(NegPos);
+// // zad 3 Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// Console.Clear();
+// int[] RandomArray(int N, int start, int end)
+// {
+//     int[] Array = new int[N];
+//     for(int i = 0; i < N; i ++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+// return Array;
+// }
+
+// void Show(int[] Arr)
+// {
+//     for(int i = 0; i< Arr.Length; i ++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Write("Введите размер массива: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите начало диапазона: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите конец диапазона: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число которое надо найти: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int [] myArray = RandomArray(num, min, max);
+// Show(myArray);
+// int Chislo = 0;
+// for(int i = 0; i < myArray.Length; i++)
+// {
+//     if(myArray[i] == number)
+//         {
+//             Chislo++;
+//         }
+// }
+// if(Chislo > 0)
+// {
+//     Console.WriteLine($"Число {number} присутствует в массиве");
+// }
+// else
+// {
+//     Console.WriteLine($"Число {number} отсутствует в массиве");
+// }
 // // DZ sem 5.
 // // zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
@@ -601,51 +690,60 @@
 // }
 // // zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
-int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
-{
-    int[] Array = new int[N];
-    for (int i = 0; i < N; i++)
-    {
-        Array[i] = new Random().Next(start, end + 1);
-    }
-    return Array;
-}
+// int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
 
-void Show(int[] Arr) /*функция задает вывод массива*/
-{
-    for (int i = 0; i < Arr.Length; i++)
-    {
-        Console.Write(Arr[i] + " ");
-    }
-    Console.WriteLine();
-}
+// void Show(int[] Arr) /*функция задает вывод массива*/
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-void Count(int[] Arr2)
-{
-    int N = 0;
-    for (int i = 0; i < Arr2.Length; i += 2)
-    {
-        N += Arr2[i];
-    }
-    Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {N}");
-}
+// void Count(int[] Arr2)
+// {
+//     int N = 0;
+//     for (int i = 0; i < Arr2.Length; i += 2)
+//     {
+//         N += Arr2[i];
+//     }
+//     Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {N}");
+// }
 
-Console.Clear();
-Console.WriteLine("Введите количество элементов в массиве");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num < 1)
-{
-    Console.WriteLine("ERROR!");
-}
-else
-{
-    Console.WriteLine("Введите первое число диапазона");
-    int min = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Введите последнее число диапазона");
-    int max = Convert.ToInt32(Console.ReadLine());
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num < 1)
+// {
+//     Console.WriteLine("ERROR!");
+// }
+// else
+// {
+//     Console.WriteLine("Введите первое число диапазона");
+//     int min = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите последнее число диапазона");
+//     int max = Convert.ToInt32(Console.ReadLine());
 
-    int[] CreateRandomArray = RandomArray(num, min, max);
-    Show(CreateRandomArray);
-    Count(CreateRandomArray);
-}
+//     int[] CreateRandomArray = RandomArray(num, min, max);
+//     Show(CreateRandomArray);
+//     Count(CreateRandomArray);
+// }
 // // zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+Console.Clear();
+int[] RandomArray(int size, int start, int end)
+{
+    int Array = new int[size];
+    for(int i = 0; i < size; i++)
+    {
+        Array[i] = new Random().Next(start, end +1);
+    }
+}
