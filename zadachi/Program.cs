@@ -637,8 +637,11 @@
 // {
 //     Console.WriteLine($"Число {number} отсутствует в массиве");
 // }
+
 // // DZ sem 5.
+
 // // zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
 // int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
 // {
 //     int[] Array = new int[N];
@@ -668,7 +671,7 @@
 //             N++;
 //         }
 //     }
-//     Console.WriteLine($"В массиве {N} четных чисел");
+//     Console.WriteLine($"Четных чисел в массиве: {N}");
 // }
 
 // Console.Clear();
@@ -688,6 +691,7 @@
 //     Show(CreateRandomArray);
 //     Count(CreateRandomArray);
 // }
+
 // // zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
 // int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
@@ -739,55 +743,58 @@
 
 
 // // zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-Console.Clear();
-int[] RandomArray(int size, int start, int end)
-{
-    int[] Array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        Array[i] = new Random().Next(start, end + 1);
-    }
-    return Array;
-}
 
-void Show(int[] Array)
-{
-    for (int i = 0; i < Array.Length; i++)
-    {
-        Console.Write(Array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// Console.Clear();
+// int[] RandomArray(int size, int start, int end)
+// {
+//     int[] Array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
 
-int MinMax(int[] Array)
-{
-    int Min = Array[0];
-    int Max = Array[0];
-    int Diff = 0;
-    for (int i = 0; i < Array.Length - 1; i++)
-    {
-        if (Min > Array[i + 1])
-        {
-            Min = Array[i + 1];
-        }
-        if (Max < Array[i + 1])
-        {
-            Max = Array[i + 1];
-        }
-    }
-    Diff = Max - Min;
-    return Diff;
-}
+// void Show(int[] Array)
+// {
+//     for (int i = 0; i < Array.Length; i++)
+//     {
+//         Console.Write(Array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-Console.WriteLine("Введите размер массива");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите первое число диапазона");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите последнее число диапазона");
-int max = Convert.ToInt32(Console.ReadLine());
+// int MinMax(int[] Array)
+// {
+//     int Min = Array[0];
+//     int Max = Array[0];
+//     int Diff = 0;
+//     for (int i = 0; i < Array.Length - 1; i++)
+//     {
+//         if (Min > Array[i + 1])
+//         {
+//             Min = Array[i + 1];
+//         }
+//         if (Max < Array[i + 1])
+//         {
+//             Max = Array[i + 1];
+//         }
+//     }
+//     Diff = Max - Min;
+//     return Diff;
+// }
 
-int[] CreateRandomArray = RandomArray(num, min, max);
-Show(CreateRandomArray);
-Console.WriteLine(
-    $"Разница между наибольшим и наименьшим значениями = {MinMax(CreateRandomArray)}"
-);
+// Console.WriteLine("Введите размер массива");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число диапазона");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число диапазона");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] CreateRandomArray = RandomArray(num, min, max);
+// Show(CreateRandomArray);
+// Console.WriteLine(
+//     $"Разница между наибольшим и наименьшим значениями = {MinMax(CreateRandomArray)}"
+// );
+
+// // Sem 5:
