@@ -503,11 +503,128 @@
 // int[] myArray = CreateArray();
 // Show(myArray);
 
+// // zad 1: Задайте массив из 12 элементов, заполненный случайными числами из промежутка от [-9, 9].
+// // Найдите сумму отрицательных и положительных элементов массива.
+Console.Clear();
+int[] RandomArray(int n, int start, int end) /*задаем рандомный массив с необходимыми параметрами*/
+{
+    int[] Array = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        Array[i] = new Random().Next(start, end + 1);
+    }
+    return Array;
+}
+
+void Show(int[] Arr)
+{
+    for (int i = 0; i < Arr.Length; i++)
+    {
+        Console.Write(Arr[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+int[] myArray = RandomArray(12, -9, 9);
+Show(myArray);
+int Pos = 0;
+int Neg = 0;
+for (int i = 0; i < 12; i++)
+{
+    if (myArray[i] < 0)
+    {
+        Neg += myArray[i];
+    }
+    else
+    {
+        Pos += myArray[i];
+    }
+}
+Console.WriteLine($"Сумма отрицательных чисел = {Neg},\nCумма положительных = {Pos}");
 
 
-// DZ sem 5.
-// zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// // DZ sem 5.
+// // zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
 
-// zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// void Show(int[] Arr) /*функция задает вывод массива*/
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-// zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// int Count(int n)
+// {
+//     for(int i = 0; i < )
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число диапазона от 100 до 999");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число диапазона от 100 до 999");
+// int max = Convert.ToInt32(Console.ReadLine());
+// if (min < 100 || min > 999 || max < 100 || max > 999)
+// {
+//     Console.WriteLine("ERROR!");
+// }
+// else
+// {
+//     int[] CreateRandomArray = RandomArray(num, min, max);
+//     Show(CreateRandomArray);
+// }
+// // zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
+
+// void Show(int[] Arr)/*функция задает вывод массива*/
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int Count(int n)
+// {
+//     for(int i = 0; i < ; i = i + 2)
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число диапазона от 100 до 999");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число диапазона от 100 до 999");
+// int max = Convert.ToInt32(Console.ReadLine());
+// if (min < 100 || min > 999 || max < 100 || max > 999)
+// {
+//     Console.WriteLine("ERROR!");
+// }
+// else
+// {
+// int[] CreateRandomArray = RandomArray(12, -9, 9);
+// Show(CreateRandomArray);
+// }
+// // zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
