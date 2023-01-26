@@ -725,7 +725,7 @@
 //     Show(CreateRandomArray);
 //     Console.WriteLine();
 //     Count(CreateRandomArray);
-// }     
+// }
 
 // void Count(int[] Arr2)
 // {
@@ -743,16 +743,16 @@ Console.Clear();
 int[] RandomArray(int size, int start, int end)
 {
     int[] Array = new int[size];
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-        Array[i] = new Random().Next(start, end +1);
+        Array[i] = new Random().Next(start, end + 1);
     }
     return Array;
 }
 
 void Show(int[] Array)
 {
-    for(int i = 0; i < Array.Length; i++)
+    for (int i = 0; i < Array.Length; i++)
     {
         Console.Write(Array[i] + " ");
     }
@@ -764,20 +764,19 @@ int MinMax(int[] Array)
     int Min = Array[0];
     int Max = Array[0];
     int Diff = 0;
-    for(int i = 0; i < Array.Length - 1; i++)
+    for (int i = 0; i < Array.Length - 1; i++)
     {
-        if(Min > Array[i + 1])
+        if (Min > Array[i + 1])
         {
-            Min = Array[i + 1]; 
+            Min = Array[i + 1];
         }
-        if(Max < Array[i + 1])
+        if (Max < Array[i + 1])
         {
             Max = Array[i + 1];
         }
     }
     Diff = Max - Min;
     return Diff;
-    
 }
 
 Console.WriteLine("Введите размер массива");
@@ -789,4 +788,6 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int[] CreateRandomArray = RandomArray(num, min, max);
 Show(CreateRandomArray);
-Console.WriteLine($"Разница между наибольшим и наименьшим значениями = {MinMax(CreateRandomArray)}");
+Console.WriteLine(
+    $"Разница между наибольшим и наименьшим значениями = {MinMax(CreateRandomArray)}"
+);
