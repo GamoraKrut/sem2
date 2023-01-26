@@ -759,6 +759,27 @@ void Show(int[] Array)
     Console.WriteLine();
 }
 
+int MinMax(int[] Array)
+{
+    int Min = Array[0];
+    int Max = Array[0];
+    int Diff = 0;
+    for(int i = 0; i < Array.Length - 1; i++)
+    {
+        if(Min > Array[i + 1])
+        {
+            Min = Array[i + 1]; 
+        }
+        if(Max < Array[i + 1])
+        {
+            Max = Array[i + 1];
+        }
+    }
+    Diff = Max - Min;
+    return Diff;
+    
+}
+
 Console.WriteLine("Введите размер массива");
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите первое число диапазона");
@@ -768,3 +789,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int[] CreateRandomArray = RandomArray(num, min, max);
 Show(CreateRandomArray);
+Console.WriteLine($"Разница между наибольшим и наименьшим значениями = {MinMax(CreateRandomArray)}");
