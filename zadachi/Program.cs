@@ -706,19 +706,7 @@
 //     {
 //         Console.Write(Arr[i] + " ");
 //     }
-//     Console.WriteLine();
 // }
-
-// void Count(int[] Arr2)
-// {
-//     int N = 0;
-//     for (int i = 0; i < Arr2.Length; i += 2)
-//     {
-//         N += Arr2[i];
-//     }
-//     Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {N}");
-// }
-
 // Console.Clear();
 // Console.WriteLine("Введите количество элементов в массиве");
 // int num = Convert.ToInt32(Console.ReadLine());
@@ -735,15 +723,48 @@
 
 //     int[] CreateRandomArray = RandomArray(num, min, max);
 //     Show(CreateRandomArray);
+//     Console.WriteLine();
 //     Count(CreateRandomArray);
+// }     
+
+// void Count(int[] Arr2)
+// {
+//     int N = 0;
+//     for (int i = 0; i < Arr2.Length; i += 2)
+//     {
+//         N += Arr2[i];
+//     }
+//     Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {N}");
 // }
+
+
 // // zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 Console.Clear();
 int[] RandomArray(int size, int start, int end)
 {
-    int Array = new int[size];
+    int[] Array = new int[size];
     for(int i = 0; i < size; i++)
     {
         Array[i] = new Random().Next(start, end +1);
     }
+    return Array;
 }
+
+void Show(int[] Array)
+{
+    for(int i = 0; i < Array.Length; i++)
+    {
+        Console.Write(Array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("Введите размер массива");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число диапазона");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите последнее число диапазона");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] CreateRandomArray = RandomArray(num, min, max);
+Show(CreateRandomArray);
