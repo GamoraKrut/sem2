@@ -550,6 +550,57 @@
 
 // // DZ sem 5.
 // // zad 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+// int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
+
+// void Show(int[] Arr) /*функция задает вывод массива*/
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void Count(int[] Arr2)
+// {
+//     int N = 0;
+//     for (int i = 0; i < Arr2.Length; i++)
+//     {
+//         if (Arr2[i] % 2 == 0)
+//         {
+//             N++;
+//         }
+//     }
+//     Console.WriteLine($"В массиве {N} четных чисел");
+// }
+
+// Console.Clear();
+// Console.WriteLine("Введите количество элементов в массиве");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите первое число диапазона от 100 до 999");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите последнее число диапазона от 100 до 999");
+// int max = Convert.ToInt32(Console.ReadLine());
+// if (min < 100 || min > 999 || max < 100 || max > 999 || num < 1)
+// {
+//     Console.WriteLine("ERROR!");
+// }
+// else
+// {
+//     int[] CreateRandomArray = RandomArray(num, min, max);
+//     Show(CreateRandomArray);
+//     Count(CreateRandomArray);
+// }
+// // zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
 int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
 {
     int[] Array = new int[N];
@@ -572,73 +623,29 @@ void Show(int[] Arr) /*функция задает вывод массива*/
 void Count(int[] Arr2)
 {
     int N = 0;
-    for (int i = 0; i < Arr2.Length; i++)
+    for (int i = 0; i < Arr2.Length; i += 2)
     {
-        if (Arr2[i] % 2 == 0)
-        {
-            N++;
-        }
+        N += Arr2[i];
     }
-    Console.WriteLine($"В массиве {N} четных чисел");
+    Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {N}");
 }
 
 Console.Clear();
 Console.WriteLine("Введите количество элементов в массиве");
 int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите первое число диапазона от 100 до 999");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите последнее число диапазона от 100 до 999");
-int max = Convert.ToInt32(Console.ReadLine());
-if (min < 100 || min > 999 || max < 100 || max > 999 || num < 1)
+if (num < 1)
 {
     Console.WriteLine("ERROR!");
 }
 else
 {
+    Console.WriteLine("Введите первое число диапазона");
+    int min = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите последнее число диапазона");
+    int max = Convert.ToInt32(Console.ReadLine());
+
     int[] CreateRandomArray = RandomArray(num, min, max);
     Show(CreateRandomArray);
     Count(CreateRandomArray);
 }
-// zad 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-
-// int[] RandomArray(int N, int start, int end) /*функция задает массив со случайными числами*/
-// {
-//     int[] Array = new int[N];
-//     for (int i = 0; i < N; i++)
-//     {
-//         Array[i] = new Random().Next(start, end + 1);
-//     }
-//     return Array;
-// }
-
-// void Show(int[] Arr)/*функция задает вывод массива*/
-// {
-//     for (int i = 0; i < Arr.Length; i++)
-//     {
-//         Console.Write(Arr[i] + " ");
-//     }
-//     Console.WriteLine();
-// }
-
-// int Count(int n)
-// {
-//     for(int i = 0; i < ; i = i + 2)
-// }
-
-// Console.Clear();
-// Console.WriteLine("Введите количество элементов в массиве");
-// int num = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите первое число диапазона от 100 до 999");
-// int min = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите последнее число диапазона от 100 до 999");
-// int max = Convert.ToInt32(Console.ReadLine());
-// if (min < 100 || min > 999 || max < 100 || max > 999)
-// {
-//     Console.WriteLine("ERROR!");
-// }
-// else
-// {
-// int[] CreateRandomArray = RandomArray(12, -9, 9);
-// Show(CreateRandomArray);
-// }
 // // zad 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
