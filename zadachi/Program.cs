@@ -798,3 +798,269 @@
 // );
 
 // // Sem 5:
+// foreach (var i in array) - работает как for в python(for i in array) - перебирает каждый элемент в массиве
+// dz zad 3 через double
+// double[] CreateRandomArray(int N, int start, int end)
+// {
+//     double[] RandomArray = new double[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1) + new Random().NextDouble();
+//         if (RandomArray[i] > end)
+//             RandomArray[i] = end;
+//         return RandomArray;
+//     }
+// }
+
+// void Show(int[] Array)
+// {
+//     for (int i = 0; i < Array.Length; i++)
+//     {
+//         Console.Write(Array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Zad 1: Переверните одномерный массив:
+
+// Console.Clear();
+
+// int[] RandomArray(int N, int start, int end)
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
+
+// void Show(int[] Arr)
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+/*1 способ*/
+//////////////////////////////////////////////////
+
+// int[] ReverseArray(int[] Array)
+// {
+//     int Length = Array.Length;
+//     int[] Reverse = new int[Length];
+//     for (int i = 0; i < Length; i++)
+//     {
+//         Reverse[Length - 1 - i] = Array[i];
+//     }
+//     return Reverse;
+// }
+
+/*2 способ*/
+///////////////////////////////////////////////////
+// int[] ReverseArray(int[] Array)
+// {
+//     for (int i = 0; i < Array.Length / 2; i++)
+//     {
+//         int Temp = Array[i];
+//         Array[i] = Array[Array.Length - 1 - i];
+//         Array[Array.Length - 1 - i] = Temp;
+//     }
+//     return Array;
+// }
+
+// Console.Write("Введите размер массива: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите начало диапазона: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите конец диапазона: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = RandomArray(num, min, max);
+// Console.Write("Изначальный массив: ");
+// Show(myArray);
+// Console.Write("Изначальный массив: ");
+// Show(ReverseArray(myArray));
+
+// Zad 2: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник со сторонами такой длины. АВ < BC + AC && BC < AB + AC && AC < AB + BC -  norm
+
+// int A = Convert.ToInt32(Console.ReadLine());
+// int B = Convert.ToInt32(Console.ReadLine());
+// int C = Convert.ToInt32(Console.ReadLine());
+// if (A < B + C && B < A + C && C < A + B)
+// {
+//     Console.WriteLine("norm");
+// }
+// else
+// {
+//     Console.WriteLine("error");
+// }
+
+// Zad 3: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// int[] DoubleSys(int N)
+// {
+//     int J = 0;
+//     int B = N;
+//     while (B > 0)
+//     {
+//         B = B / 2;
+//         J += 1;
+//     }
+//     int[] array = new int[J];
+//     int C = 0;
+//     while (N > 0)
+//     {
+//         if (N / 2 == 0)
+//         {
+//             array[array.Length - 1 - C] = 0;
+//         }
+//         else
+//         {
+//             array[array.Length - 1 - C] = 1;
+//         }
+//         C += 1;
+//     }
+//     return array;
+// }
+// void Show(int[] Arr)
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Show(DoubleSys(Convert.ToInt32(Console.ReadLine())));
+
+// Zad 4: Не используя рекурсию вывести первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1. dz
+
+// int[] Fibonacci(int N)
+// {
+//     int[] array = new int[N];
+//     array[1] = 1;
+//     array[2] = 1;
+//     for (int i = 2; i < N; i++)
+//     {
+//         array[i] = (array[i - 1]) + (array[i - 2]);
+//     }
+//     return array;
+// }
+// void Show(int[] Arr)
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Show(Fibonacci(Convert.ToInt32(Console.ReadLine())));
+
+// Zad 5: Напишите программу которая будет создавть копию массива с помощью поэлементного копирования.
+// Console.Clear();
+
+// int[] RandomArray(int N, int start, int end)
+// {
+//     int[] Array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         Array[i] = new Random().Next(start, end + 1);
+//     }
+//     return Array;
+// }
+
+// void Show(int[] Arr)
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] ReverseArray(int[] Array)
+// {
+//     int Length = Array.Length;
+//     int[] Reverse = new int[Length];
+//     int j = 0;
+//     foreach (int i in Array)
+//     {
+//         Reverse[Length - 1 - j] = i;
+//         j++;
+//     }
+//     return Reverse;
+// }
+
+// Console.Write("Введите размер массива: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите начало диапазона: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите конец диапазона: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = RandomArray(num, min, max);
+// Console.Write("Изначальный массив: ");
+// Show(myArray);
+// Console.Write("Изначальный массив: ");
+// Show(ReverseArray(myArray));
+
+//Dz sem 6:
+
+// // Zad 1: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+// Console.Clear();
+
+// Console.Write("Введите сколько чисел хотите ввести: ");
+// int M = Convert.ToInt32(Console.ReadLine());
+// int[] UserArray = new int[M];
+// for (int i = 0; i < M; i++)
+// {
+//     Console.Write($"Введите {i + 1} число: ");
+//     UserArray[i] = Convert.ToInt32(Console.ReadLine());
+// }
+
+// int CountPos(int[] Array)
+// {
+//     int j = 1;
+//     foreach (int i in Array)
+//     {
+//         if (i > 0)
+//         {
+//             j += 1;
+//         }
+//     }
+//     return j;
+// }
+
+// void Show(int[] Arr)
+// {
+//     for (int i = 0; i < Arr.Length; i++)
+//     {
+//         Console.Write(Arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Show(UserArray);
+// Console.WriteLine($"Введено чисел > 0: {CountPos(UserArray)}");
+
+// // Zad 2:  Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями
+// //         y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+Console.Clear();
+
+Console.Write("Введите значение b1: ");
+var b1 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Введите значение k1: ");
+var k1 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Введите значение b2: ");
+var b2 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Введите значение k2: ");
+var k2 = Convert.ToDouble(Console.ReadLine());
